@@ -30,7 +30,10 @@ steps:
   inputs:
     sshEndpoint: 'lombard55'
     runOptions: 'inline'
-    inline: 'pip install virtualenv==16.6.2'
+    inline: |
+      pip3 install virtualenv==16.6.2
+      python3 virtualenv ~/myenv
+      source ~/myenv/bin/activate
     readyTimeout: '20000'
 
 - script: echo Hello, world!
