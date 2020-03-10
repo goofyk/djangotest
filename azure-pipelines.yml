@@ -18,10 +18,10 @@ steps:
     rootDirectory: '$(Build.SourcesDirectory)'
     filePatterns: |
       **
-      !**/.git/**
-      !**/.idea/**
-      !README.md
-      !azure-pipelines.yml
+      !**/*.git/**
+      !**/*.idea/**
+      !**/README.md
+      !**/azure-pipelines.yml
     remoteDirectory: '/azuretest/upload/'
     enableUtf8: true
     clean: false
