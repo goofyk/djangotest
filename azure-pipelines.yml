@@ -13,7 +13,7 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: '92.53.96.186'
+    serverUrl: 'ftp://92.53.96.186'
     username: 'lombard55'
     password: '1989Ultra'
     rootDirectory: '/azuretest'
