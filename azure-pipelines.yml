@@ -8,16 +8,17 @@ trigger:
 #pool:
 #  vmImage: 'ubuntu-latest'
 
-steps:
-- task: FtpUpload@2
+steps:- task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
     serverUrl: 'ftp://92.53.96.186'
     username: 'lombard55'
     password: '1989Ultra'
     rootDirectory: '$(Build.SourcesDirectory)'
-    filePatterns: '**'
-    remoteDirectory: '/azuretest/upload/$(Build.SourcesDirectory)/'
+    filePatterns: |
+      *.py
+      *.html
+    remoteDirectory: '/azuretest/upload/'
     enableUtf8: true
     clean: false
     cleanContents: true
