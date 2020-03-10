@@ -16,7 +16,7 @@ steps:
     username: 'lombard55'
     password: '1989Ultra'
     rootDirectory: '$(Build.SourcesDirectory)'
-    filePatterns: '***.py/**'
+    filePatterns: '**/*.py'
     remoteDirectory: '/azuretest/upload/'
     enableUtf8: true
     clean: true
