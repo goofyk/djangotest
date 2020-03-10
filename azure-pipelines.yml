@@ -17,13 +17,14 @@ steps:
     password: '1989Ultra'
     rootDirectory: '$(Build.SourcesDirectory)'
     filePatterns: |
-      *.py
-      *.html
-    remoteDirectory: '/azuretest/upload/$(Build.SourcesDirectory)/'
+      **
+      !**\.git\**
+      !README.md
+    remoteDirectory: '/azuretest/upload/'
     enableUtf8: true
     clean: false
-    cleanContents: true
-    preservePaths: false
+    cleanContents: false
+    preservePaths: true
     trustSSL: false
 
 - script: echo Hello, world!
