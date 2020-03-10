@@ -1,0 +1,33 @@
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: '92.53.96.186'
+    username: 'lombard55'
+    password: '1989Ultra'
+    rootDirectory: '/azuretest'
+    filePatterns: '**'
+    remoteDirectory: '/upload/$(Build.BuildId)/'
+    clean: false
+    cleanContents: false
+    preservePaths: false
+    trustSSL: false
+
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
