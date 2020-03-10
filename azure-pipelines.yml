@@ -24,8 +24,7 @@ steps:
       !**/azure-pipelines.yml
     remoteDirectory: '/azuretest/upload/'
     enableUtf8: true
-    clean: false
-    cleanContents: true
+    clean: true
     preservePaths: true
     trustSSL: false
 
