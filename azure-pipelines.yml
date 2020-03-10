@@ -17,7 +17,7 @@ steps:
     password: '1989Ultra'
     rootDirectory: '$(Build.SourcesDirectory)'
     filePatterns: |
-      **
+      **./*.py/**
       !**/.git/**
       !**/.idea/**
       !**/README.md
