@@ -18,8 +18,9 @@ steps:
     rootDirectory: '/home/vsts/work/1/s'
     filePatterns: '**'
     remoteDirectory: '/azuretest/upload/$(Build.BuildId)/'
+    enableUtf8: true
     clean: false
-    cleanContents: false
+    cleanContents: true
     preservePaths: false
     trustSSL: false
 
