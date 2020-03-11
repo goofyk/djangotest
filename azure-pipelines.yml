@@ -31,7 +31,8 @@ steps:
     sshEndpoint: 'lombard55'
     runOptions: 'inline'
     inline: |
-      pip install virtualenv==16.6.2
+      cd /home/l/lombard55/azuretest/public_html
+      pip3 install virtualenv==16.6.2
       python3 virtualenv ~/myenv
       source ~/myenv/bin/activate
     readyTimeout: '20000'
