@@ -26,17 +26,17 @@ steps:
     preservePaths: true
     trustSSL: false
 
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'lombard55'
-    runOptions: 'inline'
-    inline: |
-      cd /home/l/lombard55/azuretest/public_html
-      wget https://files.pythonhosted.org/packages/53/c0/c7819f0bb2cf83e1b4b0d96c901b85191f598a7b534d297c2ef6dc80e2d3/virtualenv-16.6.0.tar.gz
-      tar xvfz virtualenv-16.6.0.tar.gz
-      python3 virtualenv-16.6.0/virtualenv.py myenv
-      source /home/l/lombard55/azuretest/public_html/myenv/bin/activate
-    readyTimeout: '20000'
+# - task: SSH@0
+#   inputs:
+#     sshEndpoint: 'lombard55'
+#     runOptions: 'inline'
+#     inline: |
+#       cd /home/l/lombard55/azuretest/public_html
+#       wget https://files.pythonhosted.org/packages/53/c0/c7819f0bb2cf83e1b4b0d96c901b85191f598a7b534d297c2ef6dc80e2d3/virtualenv-16.6.0.tar.gz
+#       tar xvfz virtualenv-16.6.0.tar.gz
+#       python3 virtualenv-16.6.0/virtualenv.py myenv
+#       source /home/l/lombard55/azuretest/public_html/myenv/bin/activate
+#     readyTimeout: '20000'
 
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
