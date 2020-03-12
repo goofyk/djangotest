@@ -32,7 +32,7 @@ steps:
     remoteDirectory: '/azuretest/public_html/app'
     enableUtf8: true
     clean: false
-    cleanContents: false
+    cleanContents: true
     preservePaths: true
     trustSSL: false
 
