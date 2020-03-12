@@ -30,6 +30,7 @@ steps:
       **/*.py
       **/*.html
       **/*.txt
+      **/*.db
     remoteDirectory: '/azuretest/public_html/mysite'
     enableUtf8: true
     clean: false
