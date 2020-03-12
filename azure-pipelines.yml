@@ -10,14 +10,12 @@ trigger:
 
 steps:
 
-# - task: SSH@0
-#   inputs:
-#     sshEndpoint: 'lombard55'
-#     runOptions: 'inline'
-#     inline: |
-#       cd /home/l/lombard55/azuretest/public_html/mysite
-#       rm -r ./*
-#     readyTimeout: '20000'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'lombard55'
+    runOptions: 'inline'
+    inline: 'rm -R /home/l/lombard55/azuretest/public_html/app/'
+    readyTimeout: '20000'
 
 - task: FtpUpload@2
   inputs:
