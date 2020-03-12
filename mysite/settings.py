@@ -28,7 +28,9 @@ SECRET_KEY = 'o)zxy3o6y3y(wes04c^_g+5r_%4cupy!e4q6_m*-0f-kmvn@2s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'lombardjinny.online'
+]
 
 
 # Application definition
