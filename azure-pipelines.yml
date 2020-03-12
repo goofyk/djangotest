@@ -20,7 +20,7 @@ steps:
       **/*.py
       **/*.html
       **/*.txt
-    remoteDirectory: '/azuretest/public_html/'
+    remoteDirectory: '/azuretest/public_html/*'
     enableUtf8: true
     clean: true
     preservePaths: true
