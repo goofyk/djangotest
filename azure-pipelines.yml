@@ -15,7 +15,7 @@ steps:
     sshEndpoint: 'lombard55'
     runOptions: 'inline'
     inline: |
-      cd /home/l/lombard55/azuretest/public_html
+      cd /home/l/lombard55/azuretest/public_html/mysite
       rm -r ./*
     readyTimeout: '20000'
 
@@ -30,7 +30,7 @@ steps:
       **/*.py
       **/*.html
       **/*.txt
-    remoteDirectory: '/azuretest/public_html/'
+    remoteDirectory: '/azuretest/public_html/mysite'
     enableUtf8: true
     clean: false
     cleanContents: false
@@ -59,8 +59,8 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- script: |
-    python -m pip install --upgrade pip setuptools wheel
-    pip install -r requirements.txt
-    pip install unittest-xml-reporting
-  displayName: 'Install prerequisites'
+# - script: |
+#     python -m pip install --upgrade pip setuptools wheel
+#     pip install -r requirements.txt
+#     pip install unittest-xml-reporting
+#   displayName: 'Install prerequisites'
